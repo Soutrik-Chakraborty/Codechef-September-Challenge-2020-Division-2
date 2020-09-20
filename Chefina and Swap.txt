@@ -1,0 +1,22 @@
+# cook your dish here
+from math import sqrt,floor
+try:
+   t = int(input())
+   while t>0:
+      t -= 1
+      n = int(input())
+      total = n*(n+1) // 2
+      if total%2 == 0 and total>0:
+         half = total // 2
+         discrmnt=sqrt(1+4*total)
+         Findx=floor((discrmnt-1)/2)
+         Bindx=n-Findx
+         # print(discrmnt,Findx,Bindx)
+         if not discrmnt%1==0:
+            print(Bindx)
+         else:
+            print(sum(range(1,Findx)) + sum(range(1,Bindx+1)))
+      else:
+         print(0)
+except:
+   pass
